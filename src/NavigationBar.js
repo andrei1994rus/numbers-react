@@ -27,13 +27,13 @@ class NavigationBar extends React.Component
                           <NavBar.Toggle aria-controls="responsive-navbar-nav"/>
                           <NavBar.Collapse id="responsive-navbar-nav">
                                 <Nav className="mr-auto">
-                                      <LinkContainer exact to="/">
+                                      <LinkContainer exact to="/numbers-react/">
                                           <Nav.Link>Home</Nav.Link>
                                       </LinkContainer>
-                                      <LinkContainer to="/find_factorial">
+                                      <LinkContainer to="/numbers-react/find_factorial">
                                           <Nav.Link>Factorial</Nav.Link>
                                       </LinkContainer>
-                                      <LinkContainer to="/random">
+                                      <LinkContainer to="/numbers-react/random">
                                           <Nav.Link>Random</Nav.Link>
                                       </LinkContainer>
                                 </Nav>

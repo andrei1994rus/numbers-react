@@ -1,8 +1,6 @@
 import {useForm} from 'react-hook-form';
-import React,{useState,useEffect,useMemo,lazy} from 'react';
+import React,{useState,useMemo,lazy} from 'react';
 import {Form} from 'react-bootstrap';
-
-import $ from 'jquery';
 
 import header_page from '../components/header_page';
 import AlertMessage from '../components/alertMessage';
@@ -32,24 +30,13 @@ const Factorial=()=>
 	        let item_arr={f,num};
 	        arr_fact.push(item_arr);
       	}
-      	console.log("arr_fact:"+arr_fact);
+      	console.log("array:",...arr_fact);
       	localStorage.setItem('array_factorial',JSON.stringify(arr_fact));
       	console.groupEnd();
     }
 	
 	const {register,handleSubmit,errors,setValue}=useForm();
-    const [showAlert,setShowAlert]=useState(false);
     const [isLoading,setIsLoading]=useState(false);
-
-
-    $(window).on('load',()=>
-    {
-    	if(localStorage.getItem('err_msg_factorial'))
-    	{
-    		console.log("$(window).on(load) (for remove item (err_msg_factorial) from localStorage)");
-			localStorage.removeItem('err_msg_factorial');
-    	}
-	});
 
     const onSubmit=data=>
     {
@@ -61,9 +48,6 @@ const Factorial=()=>
 	    find_fact(data.factorial);
 	    
 	    setValue("factorial","");
-	    localStorage.removeItem('err_msg_factorial');
-		setShowAlert(false);
-		console.log(`showAlert:${showAlert}`);
 		
 		setIsLoading(false);
 		console.log(`isLoading:${isLoading}`);
@@ -87,25 +71,6 @@ const Factorial=()=>
     	console.groupEnd();
     	return false;
     },[isLoading]);
-    
-
-    useEffect(()=>
-    {
-    	console.group("useEffect");
-    	if(errors.factorial)
-    	{
-    		console.log(errors);
-    		localStorage.setItem('err_msg_factorial',errors.factorial.message);
-	        setShowAlert(true);
-	        console.groupEnd();
-    	}
-    	
-    	else
-    	{
-    		console.log("Without errors");
-    		console.groupEnd();
-    	}
-    },[errors]);
 
     return(
         <StylesPage>
@@ -113,9 +78,9 @@ const Factorial=()=>
         		{header_page("h1","Find Factorial.")}
         	</header>
             
-            {showAlert && 
+            {errors.factorial && 
             	<div className="div_alert">
-            		<AlertMessage message={localStorage.getItem('err_msg_factorial')}/>
+            		<AlertMessage message={errors.factorial.message}/>
             	</div>
             }
 

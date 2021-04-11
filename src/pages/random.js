@@ -1,7 +1,7 @@
 import React from 'react';
 import {useForm} from 'react-hook-form';
 import {Form,Button} from 'react-bootstrap';
-import {useDispatch,useSelector} from "react-redux";
+import {useDispatch} from "react-redux";
 
 import StylesPage from '../styledComponents/StylesPage';
 
@@ -28,7 +28,6 @@ const Random=()=>
 	const has_def_value=watch("has_def_value");
 	const dispatch=useDispatch();
 
-	const arr=useSelector(state=>state.array_redux.array_random);
 	const output_random=(count,range=3000)=>
 	{
 		let arr=[];
@@ -57,13 +56,11 @@ const Random=()=>
 			setValue("input_random_range",'');
 	    }
 
-	    console.log(arr);
+	    console.log("array:",...arr);
 	    dispatch(outputRandomArray(Array.from(arr)));
 	    
 		console.groupEnd();
     }
-
-    console.log(arr);
 
 	return(
 		<StylesPage>

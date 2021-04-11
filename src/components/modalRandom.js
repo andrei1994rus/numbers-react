@@ -21,7 +21,7 @@ const ModalRandom=(arr)=>
 		{
 			if(array.length>0)
 			{
-				console.log(array);
+				console.log("array from Redux:",...array);
 				setShowModalRandom(true);
 			}
 		}

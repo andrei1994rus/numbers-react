@@ -1,7 +1,7 @@
 import React,{lazy} from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import {BrowserRouter as Router,Switch,Route} from 'react-router-dom';
+import {HashRouter as Router,Switch,Route} from 'react-router-dom';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -27,9 +27,9 @@ ReactDOM.render(
 				<Jumbo/>
 				<div id="content">
 			        <Switch>
-			            <Route exact path="/numbers-react/" component={withSuspense(Home)}/>
-			            <Route exact path="/numbers-react/find_factorial" children={withSuspense(Factorial)}/>
-			            <Route exact path="/numbers-react/random" render={withSuspense(Random)}/>
+			            <Route exact path="/" component={withSuspense(Home)}/>
+			            <Route exact path="/find_factorial" children={withSuspense(Factorial)}/>
+			            <Route exact path="/random" render={withSuspense(Random)}/>
 			            <Route children={()=>
 			            	<StylesPage>
 				            	<header>{header_page("h2","404 NOT FOUND!")}</header>

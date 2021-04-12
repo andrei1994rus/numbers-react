@@ -1,7 +1,6 @@
 import React,{Component} from 'react';
 import {Jumbotron} from 'react-bootstrap';
 import numbersImage from '../img/numbersImage.jpg';
-import Typography from '@material-ui/core/Typography';
 
 import styled from 'styled-components';
 
@@ -30,9 +29,7 @@ class Jumbo extends Component
 			<Styles>
 				<Jumbotron className="jumbo-class" fluid>
 					<div className="jumbo-text">
-						<Typography variant="h4">
-							Welcome to our site!
-						</Typography>
+						<h1>Welcome!</h1>
 					</div>	
 				</Jumbotron>
 			</Styles>		

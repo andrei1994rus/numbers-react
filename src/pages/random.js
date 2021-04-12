@@ -122,16 +122,16 @@ const Random=()=>
 	            </div>	
 	            
 	            <div className="div_hint">
-	            	<Form.Text>{hint_count}</Form.Text> 
+	            	<Form.Text id="hint_count">{hint_count}</Form.Text> 
 	            </div>
 	            <div className="div_hint">
-	            	<Form.Text>{hint_range}</Form.Text>
+	            	<Form.Text id="hint_range">{hint_range}</Form.Text>
 	            </div>
 	            <div className="div_hint">
-	            	<Form.Text>{hint_checkbox}</Form.Text>
+	            	<Form.Text id="hint_chb">{hint_checkbox}</Form.Text>
 	            </div>
 	            <div className="div_hint">
-	            	<Form.Text>{hint_submit}</Form.Text>
+	            	<Form.Text id="hint_submit">{hint_submit}</Form.Text>
 	            </div>
 
             </Form>

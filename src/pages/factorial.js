@@ -104,7 +104,7 @@ const Factorial=()=>
                 />
                
 				<div className="div_hint">
-					<Form.Text>{hint}</Form.Text>
+					<Form.Text id="hint_fact">{hint}</Form.Text>
 				</div>
             </Form>
 

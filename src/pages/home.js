@@ -21,7 +21,7 @@ class Home extends React.Component
 				<header>{header_page("h1","Home page.")}</header>
 				<div className="div_text">
 					<Typography variant="body1">
-						This site is dedicated to numbers. On this site you can:
+						This app is dedicated to numbers. This app can:
 					</Typography>
 				</div>
 				<div className="div_list">

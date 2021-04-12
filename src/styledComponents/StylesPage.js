@@ -36,8 +36,12 @@ const StylesPage=styled.div
 	.div_hint
 	{
 		color:red;
-		font-weight:900;
 		font-style:italic;
+	}
+
+	#hint_fact ,#hint_count, #hint_range, #hint_chb, #hint_submit
+	{
+		font-weight:900;
 	}
 	
 	.div_list, .div_text
@@ -63,6 +67,7 @@ const StylesPage=styled.div
 	{
 		color:red;
 		font-weight:900;
+		font-style:italic;
 	}
 `;
 

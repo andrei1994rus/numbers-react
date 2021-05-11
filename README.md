@@ -23,6 +23,6 @@
 - HTML;
 - JS;
 - CSS, CSS3;
-- Libraries:jQuery, Bootstrap, React-Bootstrap, React Hook Form, React-Router-Dom, React-Router-Bootstrap, React-Redux, Redux, Styled Components, Redux-Devtools-Extension, Redux-Thunk, Material-UI.
+- Libraries:jQuery, Bootstrap, React-Bootstrap, React Hook Form, React-Router-Dom, React-Redux, Redux, Styled Components, Redux-Devtools-Extension, Redux-Thunk, Material-UI.
 ---
 [URL](https://andrei1994rus.github.io/numbers-react/) .

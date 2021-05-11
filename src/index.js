@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import NavigationBar from './NavigationBar';
 import Jumbo from './components/jumbo';
-import header_page from './components/header_page';
+import headerPage from './components/headerPage';
 
 import StylesPage from './styledComponents/StylesPage';
 
@@ -32,7 +32,7 @@ ReactDOM.render(
 			            <Route exact path="/random" render={withSuspense(Random)}/>
 			            <Route children={()=>
 			            	<StylesPage>
-				            	<header>{header_page("h2","404 NOT FOUND!")}</header>
+				            	<header>{headerPage("404 NOT FOUND!")}</header>
 			            	</StylesPage>}/>
 			        </Switch>
 		    	</div>

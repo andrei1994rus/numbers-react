@@ -23,18 +23,16 @@ const Styles=styled.div
 
 class Jumbo extends Component
 {
-	render()
-	{
-		return(
-			<Styles>
-				<Jumbotron className="jumbo-class" fluid>
-					<div className="jumbo-text">
-						<h1>Welcome!</h1>
-					</div>	
-				</Jumbotron>
-			</Styles>		
-		);
-	}
+	render=()=>
+	(
+		<Styles>
+			<Jumbotron className="jumbo-class" fluid>
+				<div className="jumbo-text">
+					<h1>Welcome!</h1>
+				</div>	
+			</Jumbotron>
+		</Styles>		
+	)
 }
 
 export default Jumbo;

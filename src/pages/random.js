@@ -6,7 +6,7 @@ import {useDispatch} from "react-redux";
 import StylesPage from '../styledComponents/StylesPage';
 
 import AlertMessage from '../components/alertMessage';
-import header_page from '../components/header_page';
+import headerPage from '../components/headerPage';
 import ModalRandom from '../components/modalRandom';
 
 import withSuspense from '../hoc/withSuspense';
@@ -64,7 +64,7 @@ const Random=()=>
 
 	return(
 		<StylesPage>
-			<header>{header_page("h1","Random.")}</header>
+			<header>{headerPage("Random.")}</header>
 			<div className="div_alert">
 				{errors.input_random_count &&
 					<AlertMessage message={errors.input_random_count.message}/>}

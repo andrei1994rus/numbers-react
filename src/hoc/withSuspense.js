@@ -2,7 +2,7 @@ import React,{Suspense} from 'react';
 
 import Loading from '../components/loading';
 
-const withSuspense=(Component)=>(props)=>
+const withSuspense=Component=>props=>
 {
 	return(	
 		<Suspense fallback={<Loading/>}>

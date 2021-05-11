@@ -3,15 +3,11 @@ import styled from 'styled-components';
 const media=
 {
 	mobile:'@media(max-width:1000px)',
-	desktop:'@media(min-width:1001px)'
 };
 
 const StylesPage=styled.div
 `
-	${media.desktop}
-	{
-		margin-left:80px;
-	}
+	margin-left:80px;
 	
 	${media.mobile}
 	{
@@ -39,7 +35,7 @@ const StylesPage=styled.div
 		font-style:italic;
 	}
 
-	#hint_fact ,#hint_count, #hint_range, #hint_chb, #hint_submit
+	#hint_fact, #hint_count, #hint_range, #hint_chb, #hint_submit
 	{
 		font-weight:900;
 	}

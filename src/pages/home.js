@@ -4,39 +4,37 @@ import {Typography} from '@material-ui/core';
 
 import StylesPage from '../styledComponents/StylesPage';
 
-import link_text from '../components/link_text';
-import nav_item_text from '../components/nav_item_text';
+import linkText from '../components/linkText';
+import navItemText from '../components/navItemText';
 
-import header_page from '../components/header_page';
+import headerPage from '../components/headerPage';
 
 const links=["/find_factorial","/random"];
 
 
 class Home extends React.Component
 {
-	render()
-	{
-		return(
-			<StylesPage>
-				<header>{header_page("h1","Home page.")}</header>
-				<div className="div_text">
-					<Typography variant="body1">
-						This app is dedicated to numbers. This app can:
-					</Typography>
-				</div>
-				<div className="div_list">
-					<ul>
-						<li>
-							find factorial of inputed number-go to {link_text(links[0])} or click navigation item {nav_item_text("Factorial")};
-						</li>
-						<li>
-							generate random numbers-go to {link_text(links[1])} or click navigation item {nav_item_text("Random")}.
-						</li>
-					</ul>
-				</div>
-			</StylesPage>
-		);
-	}
+	render=()=>
+	(
+		<StylesPage>
+			<header>{headerPage("Home page.")}</header>
+			<div className="div_text">
+				<Typography variant="body1">
+					This app is dedicated to numbers. This app can:
+				</Typography>
+			</div>
+			<div className="div_list">
+				<ul>
+					<li>
+						find factorial of inputed number-go to {linkText(links[0])} or click navigation item {navItemText("Factorial")};
+					</li>
+					<li>
+						generate random numbers-go to {linkText(links[1])} or click navigation item {navItemText("Random")}.
+					</li>
+				</ul>
+			</div>
+		</StylesPage>
+	)
 }
 
 export default Home;

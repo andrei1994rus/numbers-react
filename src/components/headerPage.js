@@ -1,7 +1,7 @@
 import React from 'react';
 import StylesHeader from '../styledComponents/StylesHeader';
 
-const header_page=(variant,text)=>
+const headerPage=text=>
 (
 	<StylesHeader>
 		<h1 id="page_header">
@@ -10,4 +10,4 @@ const header_page=(variant,text)=>
 	</StylesHeader>
 )
 
-export default header_page;
+export default headerPage;

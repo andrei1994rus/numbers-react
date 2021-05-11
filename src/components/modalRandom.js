@@ -5,7 +5,7 @@ import $ from 'jquery';
 
 import StylesModal from '../styledComponents/StylesModal';
 
-import header_Page from './header_page';
+import headerPage from './headerPage';
 
 import {resetRandomArray} from '../reduxFeature/actions';
 
@@ -42,11 +42,11 @@ const ModalRandom=(arr)=>
 	
 	return (showModalRandom) ? 
 	(
-		<Modal show={showModalRandom} onHide={hide} size="md" centered>
+		<Modal show={showModalRandom} onHide={hide} size="lg" centered>
 			<Modal.Header closeButton>
 				<StylesModal>
 					<Modal.Title id="title">
-						{header_Page("h1","Result!")}
+						{headerPage("Result!")}
 				    </Modal.Title>
 			    </StylesModal>
 		    </Modal.Header>
@@ -54,14 +54,14 @@ const ModalRandom=(arr)=>
 		        <StylesModal>
 					<Row className="first_row">
 						<Col size="xs">#</Col>
-						<Col xs={10}>random number</Col>
+						<Col xs={9}>random number</Col>
 					</Row>
 					{array &&
 						array.map((item,index)=>
 						(
 							<Row className="other_row" key={index}>
 								<Col size="xs">{index+1}</Col>
-								<Col xs={10}>{item}</Col>
+								<Col xs={9}>{item}</Col>
 							</Row>
 						))
 					}

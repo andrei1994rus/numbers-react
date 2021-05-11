@@ -4,7 +4,7 @@ import $ from 'jquery';
 
 import StylesModal from '../styledComponents/StylesModal';
 
-import header_Page from './header_page';
+import headerPage from './headerPage';
 
 const ModalFactorial=()=>
 {
@@ -24,28 +24,27 @@ const ModalFactorial=()=>
 		setShowModal(false);
 	}
 
-	
 	return(
 		<Modal show={showModal} onHide={hide} size="lg" centered>
 			<Modal.Header closeButton>
 				<StylesModal>
 					<Modal.Title id="title">
-						{header_Page("h1","Result!")}
+						{headerPage("Result!")}
 				    </Modal.Title>
 			    </StylesModal>
 		    </Modal.Header>
 		    <Modal.Body>
 		        <StylesModal>
-					<Row className="first_row">
+					<Row className="first_row_fact">
 						<Col size="xs">i!</Col>
-						<Col xs={10}>factorial</Col>
+						<Col xs={9}>factorial</Col>
 					</Row>
 					{arr &&
 						arr.map((item,index)=>
 						(
-							<Row className="other_row" key={index}>
+							<Row className="other_row_fact" key={index}>
 								<Col size="xs">{item.f}!</Col>
-								<Col xs={10}>{item.num}</Col>
+								<Col xs={9}>{item.num}</Col>
 							</Row>
 						))
 					}

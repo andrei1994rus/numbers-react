@@ -2,7 +2,7 @@ import {useForm} from 'react-hook-form';
 import React,{useState,useMemo,lazy} from 'react';
 import {Form} from 'react-bootstrap';
 
-import header_page from '../components/header_page';
+import headerPage from '../components/headerPage';
 import AlertMessage from '../components/alertMessage';
 
 import StylesPage from '../styledComponents/StylesPage';
@@ -75,7 +75,7 @@ const Factorial=()=>
     return(
         <StylesPage>
         	<header>
-        		{header_page("h1","Find Factorial.")}
+        		{headerPage("Find Factorial.")}
         	</header>
             
             {errors.factorial && 

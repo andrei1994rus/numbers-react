@@ -2,14 +2,13 @@ import React from 'react';
 
 import {Typography} from '@material-ui/core';
 
-const nav_item_text=(text)=>
+const linkText=text=>
 (
 	<span>
-		<Typography className="nav_item" variant="caption">
+		<Typography className="link" variant="caption">
 			{text}
 		</Typography>
 	</span>
-	
 )
 
-export default nav_item_text;
+export default linkText;

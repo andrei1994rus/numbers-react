@@ -12,7 +12,7 @@ class AlertMessage extends Component
 		}
 	}
 
-	componentDidMount()
+	componentDidMount=()=>
 	{
 		console.log("componentDidMount");
 		this.setState(
@@ -21,7 +21,7 @@ class AlertMessage extends Component
 		});
 	}
 
-	componentWillUpdate(nextProps,nextState)
+	componentWillUpdate=(nextProps,nextState)=>
 	{
 		console.group("componentWillUpdate");
 		if(nextProps.message!==nextState.message)
@@ -40,17 +40,17 @@ class AlertMessage extends Component
 		console.groupEnd();
 	}
 
-	render()
+	render=()=>
 	{
+		const {message}=this.state;
 		return(
 			<div>
 				<Alert variant="danger">
-					{this.state.message}
+					{message}
 				</Alert>
 			</div>
 		);
 	}
 }
-
 
 export default AlertMessage;

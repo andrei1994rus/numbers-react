@@ -43,34 +43,32 @@ const Styles=styled.header
 
 class NavigationBar extends React.Component
 {
-  render()
-  {
-    return(
-          <div>
-              <Container fluid="true">
-                    <Styles>
-                      <NavBar expand="sm" bg="dark" variant="dark">
-                          <NavBar.Brand className="brand">Numbers on React</NavBar.Brand>
-                          <NavBar.Toggle aria-controls="responsive-navbar-nav"/>
-                          <NavBar.Collapse id="responsive-navbar-nav">
-                                <ul className="list_navbar">
-                                      <li >
-                                          <NavLink exact to="/">Home</NavLink>
-                                      </li>
-                                      <li>
-                                          <NavLink to="/find_factorial">Factorial</NavLink>
-                                      </li>
-                                      <li>
-                                          <NavLink to="/random">Random</NavLink>
-                                      </li>
+	render=()=>
+	(
+        <div>
+            <Container fluid="true">
+                <Styles>
+                    <NavBar expand="sm" bg="dark" variant="dark">
+                        <NavBar.Brand className="brand">Numbers on React</NavBar.Brand>
+                        <NavBar.Toggle aria-controls="responsive-navbar-nav"/>
+                        <NavBar.Collapse id="responsive-navbar-nav">
+                            <ul className="list_navbar">
+                                    <li>
+                                        <NavLink exact to="/">Home</NavLink>
+                                    </li>
+                                    <li>
+                                        <NavLink to="/find_factorial">Factorial</NavLink>
+                                    </li>
+                                    <li>
+                                        <NavLink to="/random">Random</NavLink>
+                                    </li>
                                 </ul>
-                          </NavBar.Collapse>
-                      </NavBar>
-                    </Styles>
-              </Container>  
-          </div>   
-    );
-  }
+                        </NavBar.Collapse>
+                    </NavBar>
+                </Styles>
+            </Container>  
+        </div>   
+    )
   
 }
 

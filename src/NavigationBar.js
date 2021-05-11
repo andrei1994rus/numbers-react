@@ -1,8 +1,7 @@
 import React from 'react';
 import NavBar from 'react-bootstrap/NavBar';
-import Nav from 'react-bootstrap/Nav';
 import Container from 'react-bootstrap/Container';
-import {LinkContainer} from 'react-router-bootstrap';
+import {NavLink} from 'react-router-dom';
 
 import styled from 'styled-components';
 
@@ -12,6 +11,34 @@ const Styles=styled.header
   flex-direction:row;
   font-size:20px;
   align-items:center;
+
+  .a 
+  {
+  	color:transparent;
+  	text-decoration:none;
+  }
+
+  .list_navbar
+  {
+  	display:flex;
+    flex-wrap:wrap;
+    margin:0;
+    padding:0;
+    list-style-type:none;
+  }
+
+  .list_navbar a
+  {
+  	text-decoration:none;
+  	color:hsla(0,0%,100%,.5);
+  	margin-left:10px;
+  }
+
+  .list_navbar a[class~="active"]
+  {
+  	color:white;
+  	text-decoration:none;
+  }
 `;
 
 class NavigationBar extends React.Component
@@ -26,17 +53,17 @@ class NavigationBar extends React.Component
                           <NavBar.Brand className="brand">Numbers on React</NavBar.Brand>
                           <NavBar.Toggle aria-controls="responsive-navbar-nav"/>
                           <NavBar.Collapse id="responsive-navbar-nav">
-                                <Nav className="mr-auto">
-                                      <LinkContainer exact to="/">
-                                          <Nav.Link>Home</Nav.Link>
-                                      </LinkContainer>
-                                      <LinkContainer to="/find_factorial">
-                                          <Nav.Link>Factorial</Nav.Link>
-                                      </LinkContainer>
-                                      <LinkContainer to="/random">
-                                          <Nav.Link>Random</Nav.Link>
-                                      </LinkContainer>
-                                </Nav>
+                                <ul className="list_navbar">
+                                      <li >
+                                          <NavLink exact to="/">Home</NavLink>
+                                      </li>
+                                      <li>
+                                          <NavLink to="/find_factorial">Factorial</NavLink>
+                                      </li>
+                                      <li>
+                                          <NavLink to="/random">Random</NavLink>
+                                      </li>
+                                </ul>
                           </NavBar.Collapse>
                       </NavBar>
                     </Styles>

@@ -14,7 +14,8 @@
 - Layout for mobile;
 - Using styles;
 - Find factorial;
-- Find random numbers.
+- Find random numbers;
+- Button Up (depends on location of content in device).
 ---
 
 # Used stack technology 
@@ -23,7 +24,7 @@
 - HTML;
 - JS;
 - CSS, CSS3;
-- Libraries:jQuery, Bootstrap, React-Bootstrap, React Hook Form, React-Router-Dom, React-Redux, Redux, Styled Components, Redux-Devtools-Extension, Redux-Thunk, Material-UI;
+- Libraries: jQuery, Bootstrap, React-Bootstrap, React Hook Form, React-Router-Dom, React-Redux, Redux, Styled Components, Redux-Devtools-Extension, Redux-Thunk, Material-UI, Font Awesome;
 - Method: Desktop First;
 ---
 [URL](https://andrei1994rus.github.io/numbers-react/) .

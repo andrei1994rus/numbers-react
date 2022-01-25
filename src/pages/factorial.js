@@ -1,6 +1,10 @@
 import {useForm} from 'react-hook-form';
-import React,{useState,useMemo,lazy} from 'react';
+import React,{useState,useMemo,lazy,useEffect} from 'react';
 import {Form} from 'react-bootstrap';
+
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faArrowUp} from "@fortawesome/free-solid-svg-icons";
+import $ from 'jquery';
 
 import headerPage from '../components/headerPage';
 import AlertMessage from '../components/alertMessage';
@@ -34,6 +38,29 @@ const Factorial=()=>
       	localStorage.setItem('array_factorial',JSON.stringify(arr_fact));
       	console.groupEnd();
     }
+
+    useEffect(()=>
+    {
+    	$("#btnUp").fadeOut(0);
+
+    	$(window).scroll(function()
+    	{
+			if($(window).scrollTop()!==0)
+			{
+				$("#btnUp").fadeIn(0);
+			}
+
+			else
+			{
+				$("#btnUp").fadeOut(0);
+			}
+		});
+
+		$("#btnUp").click(()=>
+		{
+	      	$("html").animate({scrollTop:0},0);
+	    });
+    },[]);
 	
 	const {register,handleSubmit,errors,setValue}=useForm();
     const [isLoading,setIsLoading]=useState(false);
@@ -108,6 +135,9 @@ const Factorial=()=>
 				</div>
             </Form>
 
+            <button id="btnUp">
+				<FontAwesomeIcon icon={faArrowUp} size="sm" className="fas fa-arrow-up"/>
+			</button>
         </StylesPage>
     );
 }

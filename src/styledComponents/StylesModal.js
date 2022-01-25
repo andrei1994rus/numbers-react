@@ -2,8 +2,8 @@ import styled from 'styled-components';
 
 const media=
 {
-	mobile:'@media(max-width:1000px)',
-	smallMobile:'@@media(max-width:300px)'
+	mobile:'@media(max-width:1023px)',
+	smallMobile:'@media(max-width:319px)'
 };
 
 const StylesModal=styled.div
@@ -13,8 +13,20 @@ const StylesModal=styled.div
 		color:white;
 		background:black;
 		font-weight:900;
-		font-size:20pt;
+		font-size:8vh;
 		border:1px solid white;
+
+		${media.mobile}
+		{
+			font-weight:0;
+			font-size:6vh;
+		}
+
+		${media.smallMobile}
+		{
+			font-weight:0;
+			font-size:4.5vh;
+		}
 	}
 
 	.first_row_fact
@@ -22,13 +34,19 @@ const StylesModal=styled.div
 		color:white;
 		background:black;
 		font-weight:900;
-		font-size:20pt;
+		font-size:8vh;
 		border:1px solid white;
+
+		${media.mobile}
+		{
+			font-weight:0;
+			font-size:6vh;
+		}
 
 		${media.smallMobile}
 		{
 			font-weight:0;
-			font-size:10%;
+			font-size:4.5vh;
 		}
 	}
 
@@ -41,12 +59,17 @@ const StylesModal=styled.div
 	{
 		background:#0033CC;
 		color:white;
-		font-size:130%;
+		font-size:3vmax;
 		border:1px solid black;
 
 		${media.mobile}
 		{
-			font-size:70%;
+			font-size:2.4vmax;
+		}
+
+		${media.smallMobile}
+		{
+			font-size:80%;
 		}
 	}
 
@@ -55,15 +78,16 @@ const StylesModal=styled.div
 		background:#0033CC;
 		color:white;
 		border:1px solid black;
+		font-size:3vmax;
 
 		${media.mobile}
 		{
-			font-size:60%;
+			font-size:2.4vh;
 		}
 
 		${media.smallMobile}
 		{
-			font-size:40%;
+			font-size:80%;
 		}
 	}
 `;

@@ -5,17 +5,39 @@ import {NavLink} from 'react-router-dom';
 
 import styled from 'styled-components';
 
+const media=
+{
+	mobile:'@media(max-width:1023px)',
+	smallMobile:'@media(max-width:319px)'
+};
+
 const Styles=styled.header
 `
   diplay:flex;
   flex-direction:row;
-  font-size:20px;
   align-items:center;
 
   .a 
   {
   	color:transparent;
   	text-decoration:none;
+  }
+
+  .brand
+  {
+  	font-size:3vmax;
+  	font-weight:800;
+
+  	${media.mobile}
+  	{
+  		font-size:2.5vmax;
+  	}
+
+  	${media.smallMobile}
+  	{
+  		font-weight:bold;
+  		font-size:4.2vmax;
+  	}
   }
 
   .list_navbar
@@ -31,7 +53,13 @@ const Styles=styled.header
   {
   	text-decoration:none;
   	color:hsla(0,0%,100%,.5);
-  	margin-left:10px;
+  	margin-left:15px;
+  	font-size:3vmax;
+
+  	${media.smallMobile}
+  	{
+  		font-size:4.2vmax;
+  	}
   }
 
   .list_navbar a[class~="active"]

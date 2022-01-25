@@ -1,6 +1,10 @@
-import React from 'react';
+import React,{Component} from 'react';
 
 import {Typography} from '@material-ui/core';
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faArrowUp} from "@fortawesome/free-solid-svg-icons";
+import $ from 'jquery';
+
 
 import StylesPage from '../styledComponents/StylesPage';
 
@@ -12,8 +16,31 @@ import headerPage from '../components/headerPage';
 const links=["/find_factorial","/random"];
 
 
-class Home extends React.Component
+class Home extends Component
 {
+	componentDidMount()
+	{
+		$("#btnUp").fadeOut(0);
+
+    	$(window).scroll(()=>
+    	{
+			if($(window).scrollTop()!==0)
+			{
+				$("#btnUp").fadeIn(0);
+			}
+
+			else
+			{
+				$("#btnUp").fadeOut(0);
+			}
+		});
+
+		$("#btnUp").click(()=>
+		{
+	      	$("html").animate({scrollTop:0},0);
+	    });
+	}
+
 	render=()=>
 	(
 		<StylesPage>
@@ -33,6 +60,9 @@ class Home extends React.Component
 					</li>
 				</ul>
 			</div>
+			<button id="btnUp">
+				<FontAwesomeIcon icon={faArrowUp} size="sm" className="fas fa-arrow-up"/>
+			</button>
 		</StylesPage>
 	)
 }

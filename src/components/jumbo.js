@@ -9,7 +9,7 @@ const Styles=styled.div
 	.jumbo-class
 	{
 		background:url(${numbersImage});
-		height:150px;
+		height:18vmax;
 	}
 
 	.jumbo-text
@@ -18,6 +18,8 @@ const Styles=styled.div
 		flex-direction:column;
   		align-items:center;
 		color:red;
+		font-weight:900;
+		font-size:7vh;
 	}
 `;
 
@@ -28,7 +30,7 @@ class Jumbo extends Component
 		<Styles>
 			<Jumbotron className="jumbo-class" fluid>
 				<div className="jumbo-text">
-					<h1>Welcome!</h1>
+					Welcome!
 				</div>	
 			</Jumbotron>
 		</Styles>		

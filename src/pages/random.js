@@ -1,7 +1,11 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import {useForm} from 'react-hook-form';
 import {Form,Button} from 'react-bootstrap';
 import {useDispatch} from "react-redux";
+
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faArrowUp} from "@fortawesome/free-solid-svg-icons";
+import $ from 'jquery';
 
 import StylesPage from '../styledComponents/StylesPage';
 
@@ -15,7 +19,7 @@ import {outputRandomArray} from '../reduxFeature/actions';
 
 const ModalWithSuspense=withSuspense(ModalRandom);
 
-const hint_count=`Count: input only number >0 and <300 without chars. This number must not start with zero.`;
+const hint_count=`Count: input only number >0 and not > 300 without chars. This number must not start with zero.`;
 const hint_range=`Range: input only number >0 without chars and with length not >21. 
 This number must not start with zero.`;
 const hint_checkbox="If you don't need input range, click checkbox.";
@@ -38,6 +42,29 @@ const Random=()=>
 	    }
 	    return arr;
 	}
+
+	useEffect(()=>
+    {
+    	$("#btnUp").fadeOut(0);
+
+    	$(window).scroll(function()
+    	{
+			if($(window).scrollTop()!==0)
+			{
+				$("#btnUp").fadeIn(0);
+			}
+
+			else
+			{
+				$("#btnUp").fadeOut(0);
+			}
+		});
+
+		$("#btnUp").click(()=>
+		{
+	      	$("html").animate({scrollTop:0},0);
+	    });
+    },[]);
 
     const onSubmit=data=>
     {
@@ -133,7 +160,10 @@ const Random=()=>
 	            <div className="div_hint">
 	            	<Form.Text id="hint_submit">{hint_submit}</Form.Text>
 	            </div>
-
+	            
+	            <button id="btnUp" type="button">
+					<FontAwesomeIcon icon={faArrowUp} size="sm" className="fas fa-arrow-up"/>
+				</button>
             </Form>
 		</StylesPage> 
 	);

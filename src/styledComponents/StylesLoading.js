@@ -17,7 +17,7 @@ const StylesLoading=styled.div
 `
 	.icon
 	{
-		height:20vmin;
+		height:20vh;
 	}
 		
 	display:flex;

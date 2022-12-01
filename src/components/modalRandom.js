@@ -9,7 +9,7 @@ import headerPage from './headerPage';
 
 import {resetRandomArray} from '../reduxFeature/actions';
 
-const ModalRandom=(arr)=>
+const ModalRandom=()=>
 {
 	const [showModalRandom,setShowModalRandom]=useState(false);
 	const array=useSelector(state=>state.array_redux.array_random);
@@ -31,7 +31,7 @@ const ModalRandom=(arr)=>
 	{
 		setShowModalRandom(false);
 		dispatch(resetRandomArray());
-	}
+	};
 
 	$(window).on('load',()=>
     {

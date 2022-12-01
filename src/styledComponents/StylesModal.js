@@ -18,13 +18,13 @@ const StylesModal=styled.div
 
 		${media.mobile}
 		{
-			font-weight:0;
+			font-weight:500;
 			font-size:6vh;
 		}
 
 		${media.smallMobile}
 		{
-			font-weight:0;
+			font-weight:100;
 			font-size:4.5vh;
 		}
 	}
@@ -39,13 +39,13 @@ const StylesModal=styled.div
 
 		${media.mobile}
 		{
-			font-weight:0;
+			font-weight:500;
 			font-size:6vh;
 		}
 
 		${media.smallMobile}
 		{
-			font-weight:0;
+			font-weight:100;
 			font-size:4.5vh;
 		}
 	}
@@ -69,7 +69,7 @@ const StylesModal=styled.div
 
 		${media.smallMobile}
 		{
-			font-size:80%;
+			font-size:4.3vw;
 		}
 	}
 
@@ -82,12 +82,12 @@ const StylesModal=styled.div
 
 		${media.mobile}
 		{
-			font-size:2.4vh;
+			font-size:3.5vw;
 		}
 
 		${media.smallMobile}
 		{
-			font-size:80%;
+			font-size:4.2vw;
 		}
 	}
 `;

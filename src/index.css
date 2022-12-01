@@ -15,3 +15,11 @@ body
   width:90%;
   color:black;
 }
+
+@media (768px<=width<=991px)
+{
+  .modal-dialog.modal-lg
+  {
+      max-width: 700px;
+  }
+}

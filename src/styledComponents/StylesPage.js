@@ -15,6 +15,11 @@ const StylesPage=styled.div
 		padding-left:10vw;
 	}
 
+	${media.smallMobile}
+	{
+		padding-left:2vw;
+	}
+
 	#submit, #factorial_count, #random_range, #random_count
 	{
 		font-size:3vh;
@@ -22,12 +27,12 @@ const StylesPage=styled.div
 		
 		${media.mobile}
 		{
-			font-size:2.7vmax;
+			font-size:4vw;
 		}
 
 		${media.smallMobile}
 		{
-			font-size:90%;
+			font-size:4.2vw;
 		}
 	}
 
@@ -55,12 +60,28 @@ const StylesPage=styled.div
 	#hint_fact, #hint_count, #hint_range, #hint_chb, #hint_submit
 	{
 		font-weight:900;
-		font-size:5vmax;
+		font-size:4.5vmax;
+
+		${media.mobile}
+		{
+			font-size:4vmax;
+		}
 	}
 	
 	.div_list
 	{
-		font-size:3.2vmax;
+		font-size:3.5vmax;
+
+		${media.smallMobile}
+		{
+			font-size:4.5vmax;
+			margin-left: -5vw;
+		}
+	}
+
+	.MuiTypography-body1
+	{
+		font-size:3.5vmax;
 
 		${media.mobile}
 		{
@@ -73,29 +94,18 @@ const StylesPage=styled.div
 		}
 	}
 
-	.MuiTypography-body1
-	{
-		font-size:3.5vmax;
-
-		${media.mobile}
-		{
-			font-size:calc(1rem*1.5);
-		}
-	}
-
 	.form-check
 	{
-		font-size:3vmax;
+		font-size:3vh;
 		
 		${media.mobile}
 		{
 			font-size:3.3vmax;
 		}
+	}
 
-		${media.smallMobile}
-		{
-			font-size:3.4vmax;
-		}
+	.form-check-label {
+		margin-left:1vw;
 	}
 
 	.link, .nav_item
@@ -133,6 +143,7 @@ const StylesPage=styled.div
 		${media.mobile}
 		{
 			font-size:3vmax;
+			width:8vmin;
 		}
 	}
 `;

@@ -25,7 +25,7 @@ const Styles=styled.header
 
   .brand
   {
-  	font-size:3vmax;
+  	font-size:3.5vmax;
   	font-weight:800;
 
   	${media.mobile}
@@ -36,7 +36,7 @@ const Styles=styled.header
   	${media.smallMobile}
   	{
   		font-weight:bold;
-  		font-size:4.2vmax;
+  		font-size:6vw;
   	}
   }
 
@@ -56,9 +56,14 @@ const Styles=styled.header
   	margin-left:15px;
   	font-size:3vmax;
 
+    ${media.mobile}
+  	{
+  		font-size:2.5vmax;
+  	}
+
   	${media.smallMobile}
   	{
-  		font-size:4.2vmax;
+  		font-size:5vw;
   	}
   }
 

@@ -1,7 +1,7 @@
-import React,{lazy} from 'react';
+import React, { lazy } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import {HashRouter as Router,Switch,Route} from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -13,30 +13,38 @@ import StylesPage from './styledComponents/StylesPage';
 
 import withSuspense from './hoc/withSuspense';
 
-import {Provider} from "react-redux";
-import {store} from './reduxFeature/';
+import { Provider } from 'react-redux';
+import { store } from './reduxFeature/';
 
-const Factorial=lazy(()=>import('./pages/factorial'));
-const Random=lazy(()=>import('./pages/random'));
-const Home=lazy(()=>import('./pages/home'));
+const Factorial = lazy(() => import('./pages/factorial'));
+const Random = lazy(() => import('./pages/random'));
+const Home = lazy(() => import('./pages/home'));
+
+const WithSuspenseFactorial = withSuspense(Factorial);
+const WithSuspenseRandom = withSuspense(Random);
+const WithSuspenseHome = withSuspense(Home);
 
 ReactDOM.render(
-		<Provider store={store}>
-			<Router>
-				<NavigationBar/>
-				<Jumbo/>
-				<div id="content">
-			        <Switch>
-			            <Route exact path="/" component={withSuspense(Home)}/>
-			            <Route exact path="/find_factorial" children={withSuspense(Factorial)}/>
-			            <Route exact path="/random" render={withSuspense(Random)}/>
-			            <Route children={()=>
-			            	<StylesPage>
-				            	<header>{headerPage("404 NOT FOUND!")}</header>
-			            	</StylesPage>}/>
-			        </Switch>
-		    	</div>
-	    	</Router>
-    	</Provider>,
-		document.getElementById('root')
+  <Provider store={store}>
+    <Router basename="/numbers-react">
+      <NavigationBar />
+      <Jumbo />
+      <div id="content">
+        <Routes>
+          <Route path="/" element={<WithSuspenseHome />} />
+          <Route path="/find_factorial" element={<WithSuspenseFactorial />} />
+          <Route path="/random" element={<WithSuspenseRandom />} />
+          <Route
+            path="*"
+            element={
+              <StylesPage>
+                <header>{headerPage('404 NOT FOUND!')}</header>
+              </StylesPage>
+            }
+          />
+        </Routes>
+      </div>
+    </Router>
+  </Provider>,
+  document.getElementById('root')
 );
